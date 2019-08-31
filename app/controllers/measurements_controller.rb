@@ -1,6 +1,7 @@
 class MeasurementsController < ApplicationController
   def index
-    @measurements = Measurement.page(params[:page]).per(10)
+    @q = Measurement.ransack(params[:q])
+    @measurements = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("measurement_templates/index.html.erb")
   end
