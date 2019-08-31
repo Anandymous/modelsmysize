@@ -1,0 +1,122 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All measurements
+    </h1>
+
+    <a href="/measurements/new" class="btn btn-block btn-outline-secondary">
+      Add a new measurement
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Shirt size
+        </th>
+
+        <th>
+          Pant size
+        </th>
+
+        <th>
+          Shoe size
+        </th>
+
+        <th>
+          Instagram link
+        </th>
+
+        <th>
+          Image link
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @measurements.each do |measurement| %>
+      <tr>
+        <!-- Display measurement.id start -->
+        <td>
+          <%= measurement.id %>
+        </td>
+        <!-- Display measurement.id end -->
+
+        <!-- Display measurement.shirt_size start -->
+        <td>
+          <%= measurement.shirt_size %>
+        </td>
+        <!-- Display measurement.shirt_size end -->
+
+        <!-- Display measurement.pant_size start -->
+        <td>
+          <%= measurement.pant_size %>
+        </td>
+        <!-- Display measurement.pant_size end -->
+
+        <!-- Display measurement.shoe_size start -->
+        <td>
+          <%= measurement.shoe_size %>
+        </td>
+        <!-- Display measurement.shoe_size end -->
+
+        <!-- Display measurement.instagram_link start -->
+        <td>
+          <%= measurement.instagram_link %>
+        </td>
+        <!-- Display measurement.instagram_link end -->
+
+        <!-- Display measurement.image_link start -->
+        <td>
+          <%= measurement.image_link %>
+        </td>
+        <!-- Display measurement.image_link end -->
+
+        <!-- Display measurement.created_at start -->
+        <td>
+          <%= time_ago_in_words(measurement.created_at) %> ago
+        </td>
+        <!-- Display measurement.created_at end -->
+
+        <!-- Display measurement.updated_at start -->
+        <td>
+          <%= time_ago_in_words(measurement.updated_at) %> ago
+        </td>
+        <!-- Display measurement.updated_at end -->
+
+        <td>
+          <a href="/measurements/<%= measurement.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

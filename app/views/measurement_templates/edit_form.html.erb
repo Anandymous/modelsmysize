@@ -1,0 +1,80 @@
+<h1>
+  Edit measurement #<%= @measurement.id %>
+</h1>
+
+<hr>
+
+<!-- Form measurement start -->
+<form action="/update_measurement/<%= @measurement.id %>" method="post">
+<!-- Form measurement end -->
+
+  <!-- Label and input for shirt_size start -->
+  <div class="form-group">
+    <label for="shirt_size">
+      Shirt size
+    </label>
+
+    <!-- Input for shirt_size start -->
+    <input type="text" id="shirt_size" name="shirt_size" class="form-control" value="<%= @measurement.shirt_size %>">
+    <!-- Input for shirt_size end -->
+  </div>
+  <!-- Label and input for shirt_size end -->
+
+  <!-- Label and input for pant_size start -->
+  <div class="form-group">
+    <label for="pant_size">
+      Pant size
+    </label>
+
+    <!-- Input for pant_size start -->
+    <input type="text" id="pant_size" name="pant_size" class="form-control" value="<%= @measurement.pant_size %>">
+    <!-- Input for pant_size end -->
+  </div>
+  <!-- Label and input for pant_size end -->
+
+  <!-- Label and input for shoe_size start -->
+  <div class="form-group">
+    <label for="shoe_size">
+      Shoe size
+    </label>
+
+    <!-- Input for shoe_size start -->
+    <input type="text" id="shoe_size" name="shoe_size" class="form-control" value="<%= @measurement.shoe_size %>">
+    <!-- Input for shoe_size end -->
+  </div>
+  <!-- Label and input for shoe_size end -->
+
+  <!-- Label and input for instagram_link start -->
+  <div class="form-group">
+    <label for="instagram_link">
+      Instagram link
+    </label>
+
+    <!-- Input for instagram_link start -->
+    <input type="text" id="instagram_link" name="instagram_link" class="form-control" value="<%= @measurement.instagram_link %>">
+    <!-- Input for instagram_link end -->
+  </div>
+  <!-- Label and input for instagram_link end -->
+
+  <!-- Label and input for image_link start -->
+  <div class="form-group">
+    <label for="image_link">
+      Image link
+    </label>
+
+    <!-- Input for image_link start -->
+    <input type="text" id="image_link" name="image_link" class="form-control" value="<%= @measurement.image_link %>">
+    <!-- Input for image_link end -->
+  </div>
+  <!-- Label and input for image_link end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update measurement
+  </button>
+</form>
+
+<hr>
+
+<a href="/measurements">
+  Go back
+</a>

@@ -1,0 +1,100 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Measurement #<%= @measurement.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/measurements" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link measurement start -->
+      <div class="col">
+        <a href="/measurements/<%= @measurement.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit measurement
+        </a>
+      </div>
+      <!-- Edit link measurement end -->
+
+      <!-- Delete link measurement start -->
+      <div class="col">
+        <a href="/delete_measurement/<%= @measurement.id %>" class="btn btn-block btn-outline-secondary">
+          Delete measurement
+        </a>
+      </div>
+      <!-- Delete link measurement end -->
+    </div>
+
+    <dl>
+      <dt>
+        Shirt size
+      </dt>
+      <!-- Display shirt_size start -->
+      <dd>
+        <%= @measurement.shirt_size %>
+      </dd>
+      <!-- Display shirt_size end -->
+
+      <dt>
+        Pant size
+      </dt>
+      <!-- Display pant_size start -->
+      <dd>
+        <%= @measurement.pant_size %>
+      </dd>
+      <!-- Display pant_size end -->
+
+      <dt>
+        Shoe size
+      </dt>
+      <!-- Display shoe_size start -->
+      <dd>
+        <%= @measurement.shoe_size %>
+      </dd>
+      <!-- Display shoe_size end -->
+
+      <dt>
+        Instagram link
+      </dt>
+      <!-- Display instagram_link start -->
+      <dd>
+        <%= @measurement.instagram_link %>
+      </dd>
+      <!-- Display instagram_link end -->
+
+      <dt>
+        Image link
+      </dt>
+      <!-- Display image_link start -->
+      <dd>
+        <%= @measurement.image_link %>
+      </dd>
+      <!-- Display image_link end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@measurement.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@measurement.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
