@@ -1,6 +1,6 @@
 class MeasurementsController < ApplicationController
   def index
-    @measurements = Measurement.all
+    @measurements = Measurement.page(params[:page]).per(10)
 
     render("measurement_templates/index.html.erb")
   end
